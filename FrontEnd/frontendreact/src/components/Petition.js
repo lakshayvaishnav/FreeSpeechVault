@@ -21,6 +21,7 @@ const Petition = (props) => {
   const web3ModalRef = props.web3ModalRef;
 
   const signPetition = async () => {
+    console.log("sign petition called... ");
     try {
       const signer = await getProviderOrSigner(true);
       const petitionContract = new Contract(
@@ -31,6 +32,7 @@ const Petition = (props) => {
       const tx = await petitionContract.sign();
       setLoading(true);
       await tx.wait();
+      console.log("transaction :", tx);
       setLoading(false);
       setHasSigned(true);
       getNumberOfSignitures();
@@ -105,7 +107,6 @@ const Petition = (props) => {
       props.connectWallet();
 
       getNumberOfSignitures();
-      checkIfSignedAddress();
       fetchTitle();
     }
   }, []);
@@ -159,9 +160,9 @@ const Petition = (props) => {
   const content = () => {
     if (walletConnected) {
       return (
-        <div>
-          <div className="container text-center w-50">
-            <p>
+        <div className="w-screen h-screen bg-slate-950 text-white  ">
+          <div className="container text-center w-50 top-10 relative">
+            <p className="">
               Petiton Smart Contract:{" "}
               <a
                 href={etherscancontracturl}
@@ -172,10 +173,12 @@ const Petition = (props) => {
               </a>{" "}
             </p>
 
-            <h1>{title}</h1>
-            <p className="p-3">{description}</p>
-            <p className="fw-bold">Supporters: {n}</p>
-            {renderButton()}
+            <div className="flex justify-center items-center flex-col">
+              <h1 className="text-3xl mt-6 mb-6 purple-gradient">{title}</h1>
+              <p className="p-3 text-xl light-shadow">{description}</p>
+              <p className="fw-bold mb-10 text-green-400">Supporters: {n}</p>
+              {renderButton()}
+            </div>
           </div>
         </div>
       );
@@ -194,7 +197,7 @@ const Petition = (props) => {
 
   return (
     <>
-      <div className=" my-3">{content()}</div>
+      <div>{content()}</div>
     </>
   );
 };

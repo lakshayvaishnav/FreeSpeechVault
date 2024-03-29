@@ -9,12 +9,12 @@ const override: CSSProperties = {
 
 function Loader() {
   let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("purple");
+  let [color, setColor] = useState("cyan");
 
   return (
     <div
       style={{ overflow: "hidden" }}
-      className="h-screen  sweet-loading flex justify-center items-center flex-col bg-yellow-500 overflow-hidden absolute"
+      className="h-screen w-screen  sweet-loading flex justify-center items-center flex-col bg-black absolute z-20 overflow-hidden "
     >
       <HashLoader
         color={color}

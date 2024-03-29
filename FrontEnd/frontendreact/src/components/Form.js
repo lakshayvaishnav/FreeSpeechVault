@@ -38,7 +38,7 @@ const Form = (props) => {
     if (props.walletConnected) {
       if (props.loading) {
         return (
-          <div>
+          <div className="relative">
             <Loader />
           </div>
         );
@@ -55,7 +55,10 @@ const Form = (props) => {
       }
     } else {
       return (
-        <div className=" text-center bg-red-500" role="alert">
+        <div
+          className=" text-center bg-red-500 mb-20 h-[40px] text-xl "
+          role="alert"
+        >
           Please connect your metamask wallet and switch to Sepolia Network to
           create campaign!{" "}
         </div>
@@ -66,24 +69,37 @@ const Form = (props) => {
   const displayLinks = () => {
     if (transaction.hash !== "") {
       return (
-        <div className=" my-3 flex flex-col glassmorphism absolute left-[900px]">
-          <div className="container my-3 bg-slate-950 py-5 text-center  items-center w-full">
-            <a target="_blank" rel="noreferrer" href={transaction.campaignurl}>
-              Campaign Link
+        <div className=" my-3 flex flex-col glassmorphism2 absolute left-[900px]">
+          <div className="container mb-5  text-center  items-center w-full">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="link"
+              href={transaction.campaignurl}
+            >
+              <span className="z-10">Campaign Link</span>
             </a>
           </div>
-          <div className="container my-3  bg-slate-950 py-5 text-center  items-center w-full">
-            <a target="_blank" rel="noreferrer" href={transaction.url}>
-              View Transaction On Etherscan
+          <div className="container mb-5  text-center  items-center w-full">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="link"
+              href={transaction.url}
+            >
+              <span className="z-10">View Transaction On Etherscan</span>
             </a>
           </div>
-          <div className="container my-3  bg-slate-950 py-5 text-center  items-center w-full">
+          <div className="container mb-5  text-center  items-center w-full">
             <a
               href={transaction.campaignurlexplorer}
               rel="noreferrer"
               target="_blank"
+              className="link"
             >
-              View Petition Contract On Etherscanpet
+              <span className="z-10">
+                View Petition Contract On Etherscanpet
+              </span>
             </a>
           </div>
           <div className="container my-3 text-[#FF69B4] ">
@@ -101,9 +117,9 @@ const Form = (props) => {
   };
 
   return (
-    <div className="bg-slate-950 h-screen text-white  w-screen">
+    <div className="bg-black h-screen text-white  w-screen">
       {renderAlert()}
-      <div className="container bg-red-500 p-10 ml-[100px] w-[800px] h-[500px] flex justify-start flex-col glassmorphism">
+      <div className="container  p-10 ml-[100px] w-[800px] h-[500px] flex justify-start flex-col glassmorphism2">
         <h1 className="text-center text-2xl light-shadow">
           {" "}
           Create A New Petition
@@ -143,18 +159,14 @@ const Form = (props) => {
               campaign.title.length < 5 || campaign.description.length < 5
             }
             type="submit"
-            className=" z-10 hover:cursor-pointer"
+            className=" z-10 hover:cursor-pointer link"
             onClick={handleClick}
           >
-            Create Campaign
+            <span className="z-10">Create Campaign</span>
           </div>
         </form>
         {displayLinks()}
       </div>
-
-      <button onClick={() => props.returnAllPetition()}>
-        return all petition
-      </button>
     </div>
   );
 };

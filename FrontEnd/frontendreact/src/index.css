@@ -20,7 +20,13 @@
 
 @layer utilities {
   .link {
-    @apply bg-black w-[200px] h-[60px] text-white text-opacity-50 hover:text-yellow-100;
+    @apply bg-black w-full h-[60px]  text-green-400 hover:text-white rounded-xl flex justify-center items-center font-semibold uppercase tracking-[0.25em] text-[1.2em] relative;
+  }
+  .link::before {
+    @apply content-[''] absolute w-[100%] h-[100%] rounded-xl bg-gradient-to-r from-green-600   to-green-500 top-0 left-0 scale-x-0 transition-transform ease-in-out origin-right duration-500;
+  }
+  .link:hover::before {
+    @apply scale-x-100 origin-left rounded-xl;
   }
 }
 
@@ -143,6 +149,10 @@
 
 .glassmorphism {
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+
+.glassmorphism2 {
+  @apply rounded-xl border bg-black shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)]  backdrop-blur p-5;
 }
 
 .prompt_layout {
