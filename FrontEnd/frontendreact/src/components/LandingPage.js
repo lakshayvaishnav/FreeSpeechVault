@@ -2,7 +2,7 @@ import React from "react";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
 const LandingPage = () => {
-  const navigate  = useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
       <section className="w-full flex-center flex-col bg-slate-950 h-screen absolute">
@@ -25,8 +25,8 @@ const LandingPage = () => {
             tomorrow, one signature at a time.{" "}
           </p>
         </section>
-        <div className="bg-yellow-250 z-30 text-white">
-          <button onClick={()=> navigate("/app")}>Create Campaign</button>
+        <div className="bg-yellow-250 z-30 bg-cyan-500 p-3 rounded-lg text-white font-bold ">
+          <button onClick={() => navigate("/app")}>Create Campaign</button>
         </div>
       </section>
     </div>

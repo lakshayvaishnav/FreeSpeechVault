@@ -51,7 +51,7 @@ export const abi = [
   },
 ];
 export const DEPETITION_CONTRACT_ADDRESS =
-  "0xAf1aA6738954351977991b8449fABDa1E933dd83";
+  "0x382b31d18ACEf570aa6a878487757016CD034Bc9";
 
 export const petitionAbi = [
   {

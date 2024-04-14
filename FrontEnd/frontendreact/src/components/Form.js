@@ -97,9 +97,7 @@ const Form = (props) => {
               target="_blank"
               className="link"
             >
-              <span className="z-10">
-                View Petition Contract On Etherscanpet
-              </span>
+              <span className="z-10">View Petition Contract On Etherscan</span>
             </a>
           </div>
           <div className="container my-3 text-[#FF69B4] ">
