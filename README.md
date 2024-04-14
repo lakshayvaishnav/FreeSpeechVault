@@ -25,6 +25,11 @@ run the script to deploy the contract
 ```bash
 npx hardhat run ./scripts/deploy.js --network sepolia
 ```
+copy the address from the terminal and paste it in the constants folder located in frontend directory.
+
+![Screenshot 2024-04-14 102849](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/491d1617-567a-4263-bb5c-ca6e38fbd0c2)
+</br>
+![Screenshot 2024-04-14 102917](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/4fbff103-2a30-438c-bac5-47f1d1bbb894)
 
 get back to root directory
 
@@ -61,6 +66,9 @@ To run this project, you will need to add the following environment variables to
 ## screenshots
 
 ![Screenshot 2024-04-14 101838](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/2f67855e-00bb-4748-a5ec-0836afbed74e)
+</br>
 ![Screenshot 2024-04-14 102023](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/7718b9f8-5276-4090-b553-c080525e495b)
+</br>
 ![Screenshot 2024-04-14 102042](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/b9abb273-2324-4c24-a3fb-48a70b9b86d7)
+</br>
 
