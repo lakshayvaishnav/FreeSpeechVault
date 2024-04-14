@@ -57,3 +57,10 @@ To run this project, you will need to add the following environment variables to
 `PRIVATE_KEY` - get it from your metamask wallet.
 
 `ALCEHMY_SEPOLIA` - get it from alechmy website create new app and change the network to sepolia.
+
+## screenshots
+
+![Screenshot 2024-04-14 101838](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/2f67855e-00bb-4748-a5ec-0836afbed74e)
+![Screenshot 2024-04-14 102023](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/7718b9f8-5276-4090-b553-c080525e495b)
+![Screenshot 2024-04-14 102042](https://github.com/lakshayvaishnav/FreeSpeechVault/assets/123557766/b9abb273-2324-4c24-a3fb-48a70b9b86d7)
+
